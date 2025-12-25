@@ -2,10 +2,10 @@
 Breathe Please is a minimalist web application designed to help users mitigate anxiety and overthinking through rhythmic breathing and curated wisdom. The app features a dynamic 3D-effect visual breather that guides your breathing pace, an extensive library of philosophical and psychological quotes from diverse sources including Buddha, Marcus Aurelius, and Rumi, and immersive ambient soundscapes. Breathe Please offers visual customization through four professional themes (Light, Dark, Blue, and Green) and typography options, along with responsive audio controls. Developed by Bhaskarjyoti Das as an experiment exploring the creative potential of AI and mindfulness.
 
 #### Screenshots
-<img width="500" height="268" alt="screenshot-1766650593694" src="https://github.com/user-attachments/assets/cc7f545a-8431-40ab-b4e2-2e8905f11ae0" />
-<img width="500" height="268" alt="screenshot-1766650568100" src="https://github.com/user-attachments/assets/07292729-2955-41f3-b297-f139f6afb31c" />
-<img width="500" height="268" alt="screenshot-1766650623149" src="https://github.com/user-attachments/assets/cdd6591f-d451-4f69-9eaf-9ca48803639c" />
-<img width="500" height="268" alt="screenshot-1766650644466" src="https://github.com/user-attachments/assets/b4d0c530-df59-466f-a4a1-84551c2cf7ad" />
+<img width="300" height="161" alt="screenshot-1766650593694" src="https://github.com/user-attachments/assets/cc7f545a-8431-40ab-b4e2-2e8905f11ae0" />
+<img width="300" height="161" alt="screenshot-1766650568100" src="https://github.com/user-attachments/assets/07292729-2955-41f3-b297-f139f6afb31c" />
+<img width="300" height="161" alt="screenshot-1766650623149" src="https://github.com/user-attachments/assets/cdd6591f-d451-4f69-9eaf-9ca48803639c" />
+<img width="300" height="161" alt="screenshot-1766650644466" src="https://github.com/user-attachments/assets/b4d0c530-df59-466f-a4a1-84551c2cf7ad" />
 
 
 ## Features
