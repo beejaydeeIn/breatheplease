@@ -1,4 +1,4 @@
-const CACHE_NAME = 'breathe-please-v3.5';
+const CACHE_NAME = 'breathe-please';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -57,4 +57,5 @@ self.addEventListener('fetch', (event) => {
       return response || fetch(event.request);
     })
   );
+
 });
