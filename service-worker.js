@@ -1,10 +1,10 @@
-const CACHE_NAME = 'breathe-please';
+const CACHE_NAME = 'breathe-please-v1.8';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './mantra-om.mp3',
-  './icon-512.png'
-  './icon-192.png'
+  './icon-512.png', 
+  './icon-192.png',
   './onebell.mp3'
 ];
 
@@ -13,6 +13,8 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[Service Worker] Caching core assets');
+      // IMPORTANT: If any single file here 404s, the whole install fails.
+      // Ensure these files exist!
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
@@ -38,7 +40,7 @@ self.addEventListener('activate', (event) => {
 
 // Fetch Event: Handle requests
 self.addEventListener('fetch', (event) => {
-  // Handle Google Fonts (cache them dynamically)
+  // 1. Handle Google Fonts (cache them dynamically)
   if (event.request.url.includes('fonts.googleapis.com') || event.request.url.includes('fonts.gstatic.com')) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) => {
@@ -50,19 +52,14 @@ self.addEventListener('fetch', (event) => {
         });
       })
     );
-    return;
+    return; // Exit here so we don't trigger the default handler below
   }
 
-  self.addEventListener('fetch', function(event) {
-  // A simple no-op (or pass-through) is enough to trigger the prompt
-  // But ideally, you should return a response here.
-});
-
-  // Handle App Assets (Cache First, fall back to Network)
+  // 2. Handle App Assets (Cache First, fall back to Network)
   event.respondWith(
     caches.match(event.request).then((response) => {
+      // Return cached response if found, otherwise fetch from network
       return response || fetch(event.request);
     })
   );
-
 });
